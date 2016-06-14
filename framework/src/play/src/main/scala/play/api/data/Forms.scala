@@ -616,6 +616,16 @@ object Forms {
    */
   val boolean: Mapping[Boolean] = of[Boolean]
 
+  /**
+   * Constructs a simple mapping for a date field (mapped as `java.time.LocalDatetype`).
+   *
+   * For example:
+   * {{{
+   * Form("birthdate" -> localDate)
+   * }}}
+   */
+  val localDate: Mapping[java.time.LocalDate] = of[java.time.LocalDate]
+
   def checked(msg: String): Mapping[Boolean] = boolean verifying (msg, _ == true)
 
 }
